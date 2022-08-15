@@ -1,0 +1,126 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+
+  &-wrap {
+    width: 40%;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: transparent;
+
+    &__title {
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: 700;
+      color: #212245;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-left: 0.3rem;
+      }
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+    &__box {
+      position: relative;
+      height: 50px;
+      margin: 2rem 0;
+
+      &-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        color: #212245;
+
+        &:focus {
+          border: 3px solid #212245;
+        }
+      }
+
+      &-label {
+        position: absolute;
+        top: 0.7rem;
+        right: 1rem;
+        padding: 0 0.25rem;
+        color: #212245;
+        transition: 0.3s;
+        z-index: 10;
+        font-weight: 500;
+        background-color: #fcfcfc;
+      }
+
+      &-input:focus + &-label {
+        top: -0.7rem;
+        right: 0.8rem;
+        z-index: 10;
+        font-weight: 500;
+      }
+
+      &-error {
+        position: absolute;
+        color: #df2020;
+        right: 0;
+        bottom: -50%;
+      }
+    }
+
+    &__button {
+      width: 100%;
+
+      background-color: #df2020;
+      border-radius: 0.5rem;
+      color: #fde4e4;
+      border: 3px solid transparent;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.4s ease-in-out;
+      margin-top: 1rem;
+
+      &:hover {
+        transition: all 0.4s ease-in-out;
+        transform: scale(1.05);
+      }
+    }
+    &__footer {
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #212245;
+
+
+      a{
+          color: inherit;
+          text-decoration: none;
+
+      }
+    }
+  }
+}
+
+.form-wrap__box-input:not(:placeholder-shown).form-wrap__box-input:not(:focus)
+  + .form-wrap__box-label {
+  top: -0.7rem;
+  left: 0.8rem;
+  z-index: 10;
+  font-weight: 500;
+}
