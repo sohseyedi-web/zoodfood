@@ -1,0 +1,60 @@
+.service {
+  padding: 5rem 0;
+
+  &-container {
+    margin: 0;
+
+    &__about {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 45%;
+      }
+      &-details {
+        width: 45%;
+        text-align: right;
+        color: #212245;
+
+        &__title {
+          font-size: 2rem;
+
+          span {
+            color: #df2020;
+            font-weight: bold;
+          }
+        }
+        &__subtitle {
+          margin: 1.5rem 0;
+          font-size: 1.1rem;
+        }
+        &__content {
+          margin: 0.5rem 0;
+
+          &-group {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+
+            &__head {
+              span {
+                &:first-child {
+                  color: #df2020;
+                  margin-left: 0.3rem;
+                }
+                &:last-child{
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+              }
+            }
+            &__body{
+                font-size: .9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
