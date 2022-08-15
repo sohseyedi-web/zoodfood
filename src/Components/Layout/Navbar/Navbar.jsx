@@ -2,8 +2,11 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import Logo from "../../Assets/res-logo.png";
 import { RiShoppingBasketFill, RiUserLine } from "react-icons/ri";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const { cartItems } = useSelector((state) => state.shop);
+
   return (
     <nav className="navs" dir="rtl">
       <div className="container navs-container">
@@ -19,11 +22,11 @@ const Navbar = () => {
         </div>
         <div className="navs-container__links">
           <Link to={"/"}>
-            <span>0</span>
-            <RiShoppingBasketFill size={26}/>
+            <span>{cartItems.length === 0 ? "" : cartItems.length}</span>
+            <RiShoppingBasketFill size={26} />
           </Link>
           <Link to={"/"}>
-            <RiUserLine size={26}/>
+            <RiUserLine size={26} />
           </Link>
         </div>
       </div>
