@@ -2,8 +2,13 @@ import "./Cart.scss";
 import Container from "../../Container/Container";
 import Empty from "./../Common/isEmpty/isEmpty";
 import { RiDeleteBin2Line } from "react-icons/ri";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { comma } from "./../../utils/Comma";
+import {
+  addToCart,
+  removeToCart,
+  deleteItem,
+} from "../../Store/shopping-actions/shoppingReducer";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.shop);
@@ -12,6 +17,8 @@ const Cart = () => {
     (price, total) => price + total.quantity * total.price,
     0
   );
+
+  const dispatch = useDispatch();
 
   return (
     <Container>
@@ -38,7 +45,10 @@ const Cart = () => {
                         <span className="cart-container__details-box__left-quantity">
                           تعداد :{cart.quantity}
                         </span>
-                        <button className="cart-container__details-box__left-btn">
+                        <button
+                          className="cart-container__details-box__left-btn"
+                          onClick={() => dispatch(deleteItem(cart))}
+                        >
                           <RiDeleteBin2Line size={28} />
                         </button>
                       </div>

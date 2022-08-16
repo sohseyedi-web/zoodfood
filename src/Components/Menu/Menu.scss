@@ -84,7 +84,7 @@
             justify-content: space-between;
             padding: 0.5rem 0;
 
-            button {
+            &__btn {
               width: 150px;
               height: 40px;
               border: none;
@@ -92,6 +92,11 @@
               background-color: #df2020;
               color: #fde4e4;
               font-size: 1.1rem;
+
+              &.btn-dis {
+                pointer-events: none;
+                opacity: 0.5;
+              }
             }
           }
         }

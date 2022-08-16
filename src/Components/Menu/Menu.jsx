@@ -2,7 +2,7 @@ import "./Menu.scss";
 import Container from "./../../Container/Container";
 import { RiSearch2Line } from "react-icons/ri";
 import products from "./../../Data/Data";
-import { comma } from './../../utils/Comma';
+import { comma } from "./../../utils/Comma";
 
 const Menu = () => {
   return (
@@ -38,11 +38,20 @@ const Menu = () => {
                       </div>
                     </div>
                     <div className="menu-container__body-items__box-actions">
-                      <button onClick={() => addToCartHandler(product)}>
+                      <button
+                        className={
+                          product.price === 0
+                            ? "menu-container__body-items__box-actions__btn btn-dis"
+                            : "menu-container__body-items__box-actions__btn"
+                        }
+                        onClick={() => addToCartHandler(product)}
+                      >
                         ثبت سفارش
                       </button>
                       <div className="menu-container__body-items__box-actions__price">
-                        {comma(product.price)} تومان
+                        {product.price === 0
+                          ? "موجود نیست"
+                          : `${comma(product.price)} تومان`}
                       </div>
                     </div>
                   </div>
