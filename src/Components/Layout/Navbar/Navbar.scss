@@ -33,7 +33,7 @@
       &-icon {
         position: relative;
 
-        span {
+        &__span {
           position: absolute;
           content: "";
           font-size: .9rem;
@@ -45,6 +45,10 @@
           text-align: center;
           top:-25%;
           right: -25%;
+
+          &.visi{
+            visibility: hidden;
+          }
         }
       }
     }

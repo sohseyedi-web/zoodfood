@@ -35,6 +35,7 @@ const shopSlice = createSlice({
 
       if (updateCart.quantity === 1) {
         const filterItem = updateItem.filter((i) => i.id !== action.payload.id);
+        localStorage.setItem("cart", JSON.stringify(filterItem));
         return {
           ...state,
           cartItems: filterItem,

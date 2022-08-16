@@ -46,14 +46,16 @@
             border-radius: 50%;
             width: 35px;
             height: 35px;
-            margin-right: 3rem;
           }
           &-quantity {
             font-size: 1.1rem;
+            margin: 0 1rem;
+            
           }
           &-btn {
             background-color: transparent;
             color: #df2020;
+            margin-right: 2rem;
           }
         }
       }

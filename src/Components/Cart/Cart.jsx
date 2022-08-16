@@ -1,7 +1,7 @@
 import "./Cart.scss";
 import Container from "../../Container/Container";
 import Empty from "./../Common/isEmpty/isEmpty";
-import { RiDeleteBin2Line } from "react-icons/ri";
+import { RiDeleteBin2Line, RiAddLine, RiSubtractFill } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { comma } from "./../../utils/Comma";
 import {
@@ -42,9 +42,15 @@ const Cart = () => {
                         </div>
                       </div>
                       <div className="cart-container__details-box__left">
+                        <button onClick={() => dispatch(addToCart(cart))}>
+                          <RiAddLine />
+                        </button>
                         <span className="cart-container__details-box__left-quantity">
-                          تعداد :{cart.quantity}
+                          {cart.quantity}
                         </span>
+                        <button onClick={() => dispatch(removeToCart(cart))}>
+                          <RiSubtractFill />
+                        </button>
                         <button
                           className="cart-container__details-box__left-btn"
                           onClick={() => dispatch(deleteItem(cart))}
