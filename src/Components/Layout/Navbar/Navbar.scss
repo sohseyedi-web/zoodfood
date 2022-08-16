@@ -1,5 +1,6 @@
 .navs {
   padding: 1rem 0;
+  position: relative;
 
   &-container {
     display: flex;
@@ -21,7 +22,8 @@
         margin-right: 0.2rem;
       }
     }
-    &__links {
+    &__links,
+    &__action {
       a {
         margin: 0 0 0 1.5rem;
         color: #212245;
@@ -56,6 +58,44 @@
             visibility: hidden;
           }
         }
+      }
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      &__links {
+        position: absolute;
+        content: "";
+        display: flex;
+        flex-direction: column;
+        top: 95%;
+        background-color: #f2f4f5;
+        width: 100%;
+        right: 0;
+        line-height: 3;
+        z-index: -1;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+
+        &.active-links {
+          opacity: 1;
+          z-index: 5;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+      &__action {
+        a {
+          margin-left: 0;
+          margin-right: 0.3rem;
+        }
+      }
+      &__icon {
+        display: flex;
+        cursor: pointer;
       }
     }
   }
