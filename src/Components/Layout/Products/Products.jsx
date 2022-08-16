@@ -7,6 +7,7 @@ import { addToCart } from "../../../Store/shopping-actions/shoppingReducer";
 const Products = () => {
   const dispatch = useDispatch();
 
+  const filterProduct = products.filter((i) => i.id <= 6);
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
     // console.log(product);
@@ -15,7 +16,7 @@ const Products = () => {
     <section className="products" dir="rtl">
       <div className="container products-container">
         <div className="products-container__items">
-          {products.map((product) => (
+          {filterProduct.map((product) => (
             <div className="products-container__items-box" key={product.id}>
               <div className="products-container__items-box__img">
                 <img src={product.image} alt={product.title} />

@@ -1,0 +1,101 @@
+.menu {
+  padding: 4rem 0;
+
+  &-container {
+    &__header {
+      display: flex;
+      align-items: center;
+
+      &-inputs {
+        position: relative;
+        width: 30%;
+
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 0.3rem;
+          outline: none;
+          height: 40px;
+          padding-right: 3rem;
+        }
+        span {
+          position: absolute;
+          top: 10%;
+          right: 1%;
+          color: #212245;
+        }
+      }
+    }
+    &__body {
+      padding: 5rem 0;
+      &-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__box {
+          padding: 0.2rem 0.5rem;
+          width: 30%;
+          margin: 1rem 0;
+          border-radius: 0.3rem;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+          &-img {
+            width: 60%;
+            margin: 0 auto;
+
+            img {
+              width: 100%;
+            }
+          }
+          &-detail {
+            margin: 0.5rem 0;
+
+            &__title {
+              font-size: 1.3rem;
+              font-weight: 500;
+              color: #df2020;
+            }
+            &__number {
+              margin: 0.5rem 0;
+              display: flex;
+              align-items: center;
+
+              div {
+                border-radius: 50%;
+                background-color: #df2020;
+                color: #fde4e4;
+                width: 30px;
+                height: 30px;
+                font-size: 1.1rem;
+                margin-left: 0.3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              }
+            }
+          }
+          &-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+
+            button {
+              width: 150px;
+              height: 40px;
+              border: none;
+              border-radius: 0.3rem;
+              background-color: #df2020;
+              color: #fde4e4;
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

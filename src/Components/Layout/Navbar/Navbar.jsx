@@ -16,16 +16,16 @@ const Navbar = () => {
         </div>
         <div className="navs-container__links">
           <Link to={"/"}> خانه </Link>
-          <Link to={"/"}> منو </Link>
+          <Link to={"/menu"}> منو </Link>
           <Link to={"/"}>تماس با ما </Link>
           <Link to={"/"}> صاحبان مشاغل </Link>
         </div>
         <div className="navs-container__links">
-          <Link to={"/"}>
+          <Link to={"/cart"}>
             <span>{cartItems.length === 0 ? "" : cartItems.length}</span>
             <RiShoppingBasketFill size={26} />
           </Link>
-          <Link to={"/"}>
+          <Link to={"/login"}>
             <RiUserLine size={26} />
           </Link>
         </div>
