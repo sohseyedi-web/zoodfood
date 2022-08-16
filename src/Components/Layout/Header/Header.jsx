@@ -21,7 +21,7 @@ const Header = () => {
             <Link to={"/"}>
               <button>سفارش غذا</button>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/menu"}>
               <button className="action-btn">منو کامل</button>
             </Link>
           </div>

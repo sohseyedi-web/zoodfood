@@ -86,5 +86,21 @@
         }
       }
     }
+
+    @media screen and (max-width: 992px) {
+      &__items {
+        &-box {
+          width: 45%;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      &__items {
+        flex-direction: column;
+        &-box {
+          width: 90%;
+        }
+      }
+    }
   }
 }

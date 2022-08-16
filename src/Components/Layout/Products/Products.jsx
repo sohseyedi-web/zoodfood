@@ -11,7 +11,6 @@ const Products = () => {
   const filterProduct = products.filter((i) => i.id <= 6);
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
-    // console.log(product);
   };
   return (
     <section className="products" dir="rtl">
@@ -43,7 +42,7 @@ const Products = () => {
           ))}
         </div>
         <div className="products-container__more">
-          <Link to={"/"}>
+          <Link to={"/menu"}>
             <button>مشاهده موارد بیشتر</button>
           </Link>
         </div>

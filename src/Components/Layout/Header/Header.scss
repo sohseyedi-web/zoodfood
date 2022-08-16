@@ -70,8 +70,38 @@
         }
       }
     }
-  }
-  &-bottom{
-    background-color: #df2020;
+
+    @media screen and (max-width: 992px) {
+      &__details {
+        text-align: justify;
+
+        &-title {
+          font-size: 1.4rem;
+        }
+        &-footer {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      &__details {
+        width: 100%;
+        text-align: center;
+
+        &-title {
+          font-size: 1.2rem;
+        }
+        &-actions{
+          justify-content: center;
+        }
+        &-footer {
+          justify-content: center;
+        }
+      }
+      img{
+        width: 100%;
+      }
+    }
   }
 }

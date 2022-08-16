@@ -1,8 +1,19 @@
 import "./Menu.scss";
 import Container from "./../../Container/Container";
+import Select from "react-select";
 import { RiSearch2Line } from "react-icons/ri";
 import products from "./../../Data/Data";
 import { comma } from "./../../utils/Comma";
+
+const nameOptions = [
+  { value: "Burger", label: "همبرگر" },
+  { value: "Pizza", label: "پیتزا" },
+];
+
+const rangeOptions = [
+  { value: "highest", label: "گران ترین" },
+  { value: "lowest", label: "ارزان ترین" },
+];
 
 const Menu = () => {
   return (
@@ -16,6 +27,12 @@ const Menu = () => {
                 <span>
                   <RiSearch2Line size={32} />
                 </span>
+              </div>
+              <div className="menu-container__header-select">
+                <Select options={nameOptions} placeholder="نام ..." />
+              </div>
+              <div className="menu-container__header-select">
+                <Select options={rangeOptions} placeholder="قیمت ..." />
               </div>
             </div>
             <div className="menu-container__body">

@@ -43,16 +43,56 @@
                   color: #df2020;
                   margin-left: 0.3rem;
                 }
-                &:last-child{
-                    font-size: 1.1rem;
-                    font-weight: 500;
+                &:last-child {
+                  font-size: 1.1rem;
+                  font-weight: 500;
                 }
               }
             }
-            &__body{
-                font-size: .9rem;
+            &__body {
+              font-size: 0.9rem;
             }
           }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &__about {
+        flex-direction: column;
+        &-details {
+          width: 100%;
+          text-align: justify;
+          &__title {
+            text-align: center;
+          }
+          &__content {
+            &-group {
+              text-align: right;
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 550px) {
+      &__about {
+        flex-direction: column;
+        &-details {
+          width: 90%;
+          text-align: center;
+          margin: 0 auto;
+          
+          &__content {
+            &-group {
+              text-align: center;
+            }
+          }
+        }
+        img {
+          width: 100%;
         }
       }
     }

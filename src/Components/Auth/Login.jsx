@@ -38,7 +38,7 @@ const Login = () => {
         <form className="form-wrap" onSubmit={formik.handleSubmit}>
           <div className="form-wrap__title">
             <img src={Logo} alt="" />
-            <h3>ورود به حساب</h3>
+            <h3>ورود کاربران</h3>
           </div>
           <div className="form-wrap__box">
             <input
@@ -75,7 +75,7 @@ const Login = () => {
           <input
             type="submit"
             className="form-wrap__button"
-            value="ورود به پنل"
+            value="ورود به حساب"
             disabled={!formik.isValid}
           />
           <div className="form-wrap__footer">

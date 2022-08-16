@@ -79,5 +79,52 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      &__right {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        &-logo {
+          margin-bottom: 0;
+        }
+      }
+      &__left {
+        width: 100%;
+
+        &-social {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+      &__right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        &-logo {
+          margin-bottom: 1rem;
+        }
+      }
+      &__left {
+        width: 100%;
+
+        &-social {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
   }
 }

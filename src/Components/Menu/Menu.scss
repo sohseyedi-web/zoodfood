@@ -25,6 +25,10 @@
           color: #212245;
         }
       }
+      &-select{
+        margin-right: 1rem;
+        width: 15%;
+      }
     }
     &__body {
       padding: 5rem 0;
@@ -98,6 +102,45 @@
                 opacity: 0.5;
               }
             }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width : 992px){
+      &__header{
+        justify-content: space-between;
+
+        &-inputs , &-select{
+          width: 30%;
+        }
+      }
+      &__body{
+
+        &-items{
+
+          &__box{
+            width: 45%;
+          }
+        }
+      }
+    }
+    @media screen and (max-width : 768px){
+      
+      &__header{
+        flex-direction: column;
+
+        &-inputs , &-select{
+          width: 90%;
+          margin: .5rem 0;
+        }
+      }
+      &__body{
+
+        &-items{
+          flex-direction: column;
+          &__box{
+            width: 90%;
           }
         }
       }
