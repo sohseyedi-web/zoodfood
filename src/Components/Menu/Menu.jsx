@@ -4,6 +4,7 @@ import Select from "react-select";
 import { RiSearch2Line } from "react-icons/ri";
 import products from "./../../Data/Data";
 import { comma } from "./../../utils/Comma";
+import { Helmet } from "react-helmet";
 
 const nameOptions = [
   { value: "Burger", label: "همبرگر" },
@@ -18,6 +19,9 @@ const rangeOptions = [
 const Menu = () => {
   return (
     <Container>
+      <Helmet>
+        <title>زود فود / منو</title>
+      </Helmet>
       <section className="menu" dir="rtl">
         <div className="container">
           <div className="menu-container">

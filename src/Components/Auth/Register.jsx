@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import "./Auth.scss";
 import Logo from "../Assets/res-logo.png";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 const initialValues = {
   email: "",
@@ -42,6 +43,9 @@ const Login = () => {
   });
   return (
     <Container>
+      <Helmet>
+        <title>ورود / ثبت نام</title>
+      </Helmet>
       <section className="form" dir="rtl">
         <form className="form-wrap" onSubmit={formik.handleSubmit}>
           <div className="form-wrap__title">

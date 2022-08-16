@@ -4,6 +4,7 @@ import Empty from "./../Common/isEmpty/isEmpty";
 import { RiDeleteBin2Line, RiAddLine, RiSubtractFill } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { comma } from "./../../utils/Comma";
+import { Helmet } from "react-helmet";
 import {
   addToCart,
   removeToCart,
@@ -22,6 +23,9 @@ const Cart = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>زود فود / سبد خرید</title>
+      </Helmet>
       <section className="cart" dir="rtl">
         <div className="container">
           <div className="cart-container">
