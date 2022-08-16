@@ -2,6 +2,7 @@ import "./Menu.scss";
 import Container from "./../../Container/Container";
 import { RiSearch2Line } from "react-icons/ri";
 import products from "./../../Data/Data";
+import { comma } from './../../utils/Comma';
 
 const Menu = () => {
   return (
@@ -41,7 +42,7 @@ const Menu = () => {
                         ثبت سفارش
                       </button>
                       <div className="menu-container__body-items__box-actions__price">
-                        {product.price} تومان
+                        {comma(product.price)} تومان
                       </div>
                     </div>
                   </div>

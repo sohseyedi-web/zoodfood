@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link to={"/"}> صاحبان مشاغل </Link>
         </div>
         <div className="navs-container__links">
-          <Link to={"/cart"}>
+          <Link to={"/cart"} className="navs-container__links-icon">
             <span>{cartItems.length === 0 ? "" : cartItems.length}</span>
             <RiShoppingBasketFill size={26} />
           </Link>
