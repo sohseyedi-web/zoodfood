@@ -1,6 +1,6 @@
 import "./Header.scss";
-import Hero from "../../Assets/hero.png";
 import { Link } from "react-router-dom";
+import Hero from "../../Assets/hero.png";
 import { RiShieldCheckFill, RiCarLine } from "react-icons/ri";
 
 const Header = () => {

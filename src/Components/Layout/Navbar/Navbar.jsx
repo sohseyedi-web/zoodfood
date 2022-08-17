@@ -1,10 +1,10 @@
 import "./Navbar.scss";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../Assets/res-logo.png";
-import { RiShoppingBasketFill, RiUserLine } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import Logo from "../../Assets/res-logo.png";
+import { RiShoppingBasketFill, RiUserLine } from "react-icons/ri";
 
 const Navbar = () => {
   const { cartItems } = useSelector((state) => state.shop);

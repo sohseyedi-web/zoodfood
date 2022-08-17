@@ -1,11 +1,10 @@
-import React from "react";
-import Container from "../../Container/Container";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 import "./Auth.scss";
-import Logo from "../Assets/res-logo.png";
+import * as Yup from "yup";
+import { useFormik } from "formik";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import Logo from "../Assets/res-logo.png";
+import Container from "../../Container/Container";
 
 const initialValues = {
   email: "",

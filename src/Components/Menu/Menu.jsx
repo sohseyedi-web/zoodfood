@@ -1,11 +1,11 @@
 import "./Menu.scss";
-import Container from "./../../Container/Container";
 import Select from "react-select";
-import { RiSearch2Line } from "react-icons/ri";
-import products from "./../../Data/Data";
-import { comma } from "./../../utils/Comma";
 import { Helmet } from "react-helmet";
+import products from "./../../Data/Data";
 import { useDispatch } from "react-redux";
+import { comma } from "./../../utils/Comma";
+import Container from "./../../Container/Container";
+import SearchBar from "../Common/SearchBar/SearchBar";
 import { addToCart } from "../../Store/shopping-actions/shoppingReducer";
 
 const nameOptions = [
@@ -34,12 +34,7 @@ const Menu = () => {
         <div className="container">
           <div className="menu-container">
             <div className="menu-container__header">
-              <div className="menu-container__header-inputs">
-                <input type="text" placeholder="جست و جو ..." />
-                <span>
-                  <RiSearch2Line size={32} />
-                </span>
-              </div>
+              <SearchBar />
               <div className="menu-container__header-select">
                 <Select options={nameOptions} placeholder="نام ..." />
               </div>

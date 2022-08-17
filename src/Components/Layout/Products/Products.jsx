@@ -1,9 +1,9 @@
 import "./Products.scss";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import products from "./../../../Data/Data";
+import { comma } from "./../../../utils/Comma";
 import { addToCart } from "../../../Store/shopping-actions/shoppingReducer";
-import { comma } from './../../../utils/Comma';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ const Products = () => {
                   ثبت سفارش
                 </button>
                 <div className="products-container__items-box__actions-pricde">
-                {comma(product.price)} تومان
+                  {comma(product.price)} تومان
                 </div>
               </div>
             </div>

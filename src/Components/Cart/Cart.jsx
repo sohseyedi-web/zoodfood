@@ -1,15 +1,11 @@
 import "./Cart.scss";
-import Container from "../../Container/Container";
-import Empty from "./../Common/isEmpty/isEmpty";
-import { RiDeleteBin2Line, RiAddLine, RiSubtractFill } from "react-icons/ri";
-import { useSelector, useDispatch } from "react-redux";
-import { comma } from "./../../utils/Comma";
 import { Helmet } from "react-helmet";
-import {
-  addToCart,
-  removeToCart,
-  deleteItem,
-} from "../../Store/shopping-actions/shoppingReducer";
+import { comma } from "./../../utils/Comma";
+import Empty from "./../Common/isEmpty/isEmpty";
+import Container from "../../Container/Container";
+import { useSelector, useDispatch } from "react-redux";
+import { RiDeleteBin2Line, RiAddLine, RiSubtractFill } from "react-icons/ri";
+import {addToCart,removeToCart,deleteItem} from "../../Store/shopping-actions/shoppingReducer";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.shop);

@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import _ from "lodash";
 
 const initialState = {
   cartItems: localStorage.getItem("cart")
     ? JSON.parse(localStorage.getItem("cart"))
     : [],
+  value: "",
 };
 
 const shopSlice = createSlice({
@@ -61,6 +63,7 @@ const shopSlice = createSlice({
         cartItems: filterItem,
       };
     },
+    
   },
 });
 

@@ -1,10 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import Layout from "./Components/Layout/Layout";
-import Login from "./Components/Auth/Login";
-import Register from "./Components/Auth/Register";
 import Cart from "./Components/Cart/Cart";
-import Empty from "./Components/Common/isEmpty/isEmpty";
 import Menu from "./Components/Menu/Menu";
+import Login from "./Components/Auth/Login";
+import Layout from "./Components/Layout/Layout";
+import { Route, Routes } from "react-router-dom";
+import Register from "./Components/Auth/Register";
+import Empty from "./Components/Common/isEmpty/isEmpty";
 
 function App() {
   return (
