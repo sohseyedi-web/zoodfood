@@ -5,6 +5,8 @@ import { RiSearch2Line } from "react-icons/ri";
 import products from "./../../Data/Data";
 import { comma } from "./../../utils/Comma";
 import { Helmet } from "react-helmet";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../Store/shopping-actions/shoppingReducer";
 
 const nameOptions = [
   { value: "Burger", label: "همبرگر" },
@@ -17,6 +19,12 @@ const rangeOptions = [
 ];
 
 const Menu = () => {
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (product) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <Container>
       <Helmet>
